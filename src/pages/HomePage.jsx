@@ -1,6 +1,21 @@
+import { useEffect, useState } from "react";
 import reactRouterLogo from "../assets/example.svg";
 
 export default function HomePage() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function getProducts() {
+      const response = await fetch("products.json");
+      const data = await response.json();
+      console.log(data);
+
+      setProducts(data);
+    }
+
+    getProducts();
+  }, []);
+
   return (
     <>
       <header>
@@ -35,6 +50,11 @@ export default function HomePage() {
           <h3>3. External URL</h3>
           <img src="https://picsum.photos/200" alt="Random external image" className="img-medium" />
         </article>
+        <div>
+          {products.map(product => (
+            <h2>{product.name}</h2>
+          ))}
+        </div>
       </main>
     </>
   );
