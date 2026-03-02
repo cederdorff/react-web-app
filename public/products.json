@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "price": 99,
+    "category": "Subscription",
+    "description": "Basic adgang til platformen."
+  },
+  {
+    "id": 2,
+    "name": "Pro Plan",
+    "price": 199,
+    "category": "Subscription",
+    "description": "Udvidede features til teams."
+  },
+  {
+    "id": 3,
+    "name": "UI Kit",
+    "price": 49,
+    "category": "Design Asset",
+    "description": "Komponentbibliotek til hurtig prototyping."
+  }
+]
